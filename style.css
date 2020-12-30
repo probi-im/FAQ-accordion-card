@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.card {
+  display: flex;
+  width: 1000px;
+  height: 550px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 10px 40px -10px #333;
+}
+
+.svgs {
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-size: 275%;
+  background-position: 100% 65%;
+  background-repeat: no-repeat;
+  width: 40%;
+  position: relative;
+}
+.trim-svg {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+.svgs .women {
+  width: 120%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.svgs .box {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -25%);
+}
+
+.content {
+  flex: 1;
+  padding: 80px;
+}
+.content h1 {
+  margin-bottom: 30px;
+  color: hsl(238, 29%, 16%);
+}
+
+.accordion .pan {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+.accordion .pan .title {
+  font-size: 12px;
+  font-weight: 400;
+  color: hsl(238, 29%, 16%);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px 0;
+}
+.accordion .pan:not(.toggled) .title:hover {
+  color: hsl(14, 88%, 65%);
+}
+.accordion .pan .title .toggler {
+  margin-left: auto;
+  transform: rotate(0deg);
+  transition: 0.5s transform ease;
+  pointer-events: none;
+}
+.accordion .pan.toggled .title {
+  font-weight: 700;
+}
+.accordion .pan.toggled .title .toggler {
+  transform: rotate(180deg);
+}
+.accordion .pan .text {
+  font-size: 12px;
+  color: hsl(237, 12%, 33%);
+  margin-bottom: 15px;
+}
+.accordion .pan:not(.toggled) .text {
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 0;
+}
